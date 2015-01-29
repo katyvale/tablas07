@@ -1,7 +1,30 @@
 #include <iostream>
 #include <conio>
 #include <fstream>
+#include <math>
 
+void Generar(int v[], int p, int x)
+{
+	int bt;
+   int per = p / x;
+   int k = 0;
+   for(int i = 0; i < x; i++)
+   {
+   	for(int j = 1; j <= per; j++)
+      {
+         if (i % 2 == 0)
+         {
+         	bt = 1;
+         }
+         else
+         {
+         	bt = 0;
+         }
+         v[k] = bt;
+         k++;
+      }
+   }
+}
 
 void IMPRIMIR3(int a[], int b[], int c[])
 {
