@@ -158,11 +158,122 @@ void XNOR(int a[], int b[], int c[])
       	c[i] = 0;
       }
    }
-}  
+}
+void Caso_Uno()
+{
+
+	ofstream archivo("C:/Users/SYSTEMARKET/Documents/GitHub/ARCHIVO/Archivo_Tablas.txt");
+   archivo<<"\t\tTABLA DE LAS COMPUERTAS LOGICAS";
+   archivo<<'\n';
+   cout<<"El archivo fue almacenado en la direccion C:/Users/SYSTEMARKET/Documents/GitHub/ARCHIVO con el nombre de Archivo_Tablas.txt"<<"\n\n";
+   cout<<"Las tablas han sido generadas y almacenadas en el archivo"<<"\n\n";
+
+	int i, n = 4, t, a[4], b[4], c[4];
+   a[0] = 1;
+   a[1] = 1;
+   a[2] = 0;
+   a[3] = 0;
+
+   b[0] = 1;
+   b[1] = 0;
+   b[2] = 1;
+   b[3] = 0;
+
+   for( t = 1; t < 8; t++)
+   {
+   	 switch(t)
+      {
+
+      	case 1:
+         
+         archivo<<"TABLA NOT"<<'\n';
+         NOT(b, c);
+         archivo<<'\n';
+         archivo<<"a c"<<'\n';
+			for( i = 0; i < 2; i++)
+		   {
+		   	archivo<<b[i]<<" "<<c[i]<<'\n';
+		   }
+         archivo<<'\n';
+         break;
+
+         case 2:
+         archivo<<"TABLA AND"<<'\n';
+         AND(a, b, c);
+         archivo<<'\n';
+         archivo<<"a b c"<<'\n';
+			for( i = 0; i < n; i++)
+		   {
+   			archivo<<a[i]<<" "<<b[i]<<" "<<c[i]<<'\n';
+		   }
+         archivo<<'\n';
+         break;
+
+         case 3:
+         archivo<<"TABLA OR"<<'\n';
+         OR(a, b, c);
+         archivo<<'\n';
+         archivo<<"a b c"<<'\n';
+			for( i = 0; i < n; i++)
+		   {
+   			archivo<<a[i]<<" "<<b[i]<<" "<<c[i]<<'\n';
+		   }
+         archivo<<'\n';
+         archivo<<'\n';
+         break;
+
+         case 4:
+         archivo<<"TABLA NAND"<<'\n';
+         NAND(a, b, c);
+         archivo<<'\n';
+         for( i = 0; i < n; i++)
+		   {
+   			archivo<<a[i]<<" "<<b[i]<<" "<<c[i]<<'\n';
+		   }
+         archivo<<'\n';
+         break;
+
+         case 5:
+         archivo<<"TABLA NOR"<<'\n';
+         NOR(a, b, c);
+         archivo<<'\n';
+			for( i = 0; i < n; i++)
+		   {
+   			archivo<<a[i]<<" "<<b[i]<<" "<<c[i]<<'\n';
+		   }
+         archivo<<'\n';
+         break;
+
+         case 6:
+         archivo<<"TABLA XOR"<<'\n';
+         XOR(a, b, c);
+         archivo<<'\n';
+         for( i = 0; i < n; i++)
+		   {
+   			archivo<<a[i]<<" "<<b[i]<<" "<<c[i]<<'\n';
+		   }
+         archivo<<'\n';
+         break;
+
+         case 7:
+         archivo<<"TABLA XNOR"<<'\n';
+         XNOR(a, b, c);
+         archivo<<'\n';
+         for( i = 0; i < n; i++)
+		   {
+   			archivo<<a[i]<<" "<<b[i]<<" "<<c[i]<<'\n';
+		   }
+         archivo<<'\n';
+         break;
+      }
+   }
+
+   archivo.close();
+}
 
 main()
 {
-	int a[5], b[5], c[5], n = 4;
+	int a[4], b[4], c[4], n = 4;
    char t;
    a[0] = 1;
    a[1] = 1;
