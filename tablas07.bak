@@ -277,10 +277,10 @@ void NAND5(int a[], int b[], int c[], int d[], int e[], int s[])    //Calculo de
 void ARCHIVO()   //funcion para generar las tablas en un archivo
 {
 
-	ofstream archivo("C:/Users/SYSTEMARKET/Documents/cOMPROBAR/comprobacion.txt");
+	ofstream archivo("C:/Users/SYSTEMARKET/Documents/GitHub/ARCHIVO/ArchivoTablas.txt");
    archivo<<"\t\tTABLA DE LAS COMPUERTAS LOGICAS";
    archivo<<'\n';
-   cout<<"El archivo fue almacenado en la direccion C:/Users/SYSTEMARKET/Documents/cOMPROBAR/comprobacion.txt con el nombre de final.txt"<<"\n\n";
+   cout<<"El archivo fue almacenado en la direccion C:/Users/SYSTEMARKET/Documents/GitHub/ARCHIVO con el nombre de ArchivoTablas.txt"<<"\n\n";
    cout<<'\n';
    cout<<"Las tablas han sido generadas y almacenadas en el archivo...dirijase a al directorio para que pueda visualizar"<<"\n\n";
 
