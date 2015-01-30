@@ -661,11 +661,20 @@ main()
    int a[5], b[5], c[5];
    char op;
 
+   cout<<"\t\tESCUELA SUPERIOR POLITECNICA DE CHIMBORAZO\n";
+   cout<<"\t\t\tLENGUAJE DE PROGRAMACION I\n";
+   cout<<"SEGUNDO A \n\n";
+   cout<<"INTEGRANTES: \n";
+   cout<<"Valeria Hernandez     804\n";
+   cout<<"Daniel Chicaiza       781\n";
+   cout<<"Hector Paredes.       778\n";
+   cout<<"\n\n\n";
+
 
    do
    {
 	   cout<<"\t\tTABLA DE LAS COMPUERTAS LOGICAS"<<'\n';
-   	cout<<"1.- Generar tablas de verdad con dos entradas."<<'\n';
+   	cout<<"1.- Generar en un archivotablas de verdad con dos entradas."<<'\n';
 	   cout<<"2.- Ver tablas de verdad con dos entradas."<<'\n';
    	cout<<"3.- Generar y ver tabla de verdad con n entradas."<<'\n';
 	   cout<<"4.- Salir."<<'\n';
