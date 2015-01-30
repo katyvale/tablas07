@@ -304,44 +304,42 @@ main()
    cin>>t;
    cout<<'\n';
 
-   	switch(t)
-      {
-      	case '1':
-         NOT(b, c);
-         IMPRIMIRNOT(b,c);
+   	do
+   {
+	   cout<<"\t\tTABLA DE LAS COMPUERTAS LOGICAS"<<'\n';
+   	cout<<"1.- Generar tablas de verdad con dos entradas."<<'\n';
+	   cout<<"2.- Ver tablas de verdad con dos entradas."<<'\n';
+   	cout<<"3.- Generar y ver tabla de verdad con n entradas."<<'\n';
+	   cout<<"4.- Salir."<<'\n';
+   	cout<<'\n';
 
-         break;
+	   cout<<"Que opcion desea realizar: ";
+   	cin>>op;
 
-         case '2':
-         AND(a, b, c);
-         IMPRIMIR3(a, b, c);
-         break;
+	   switch(op)
+   	{
+	   	case '1':
+   	   ARCHIVO();
+      	break;
+
+	      case '2':
+   	   DE_DOS_ENTRADAS(a, b, c);
+      	break;
 
          case '3':
-         OR(a, b, c);
-         IMPRIMIR3(a, b, c);
+
          break;
 
          case '4':
-         NAND(a, b, c);
-         IMPRIMIR3(a, b, c);
+         cout<<"A pedido salir del programa.... El programa se cerrara";
          break;
-
-         case '5':
-         NOR(a, b, c);
-         IMPRIMIR3(a, b, c);
-         break;
-
-         case '6':
-         XOR(a, b, c);
-         IMPRIMIR3(a, b, c);
-         break;
-
-         case '7':
-         XNOR(a, b, c);
-         IMPRIMIR3(a, b, c);
-         break;
+	   }
+      if (op > '4')
+      {
+      cout<<'\n'<<"La opcion no existe... El programa se cerrara.";
       }
+
+   }while( op < '4' && op > '0');
 
 
 	getch();
