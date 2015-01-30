@@ -668,6 +668,7 @@ main()
    cout<<"Valeria Hernandez     804\n";
    cout<<"Daniel Chicaiza       781\n";
    cout<<"Hector Paredes.       778\n";
+   cout<<"\n\n\n";
 
 
    do
